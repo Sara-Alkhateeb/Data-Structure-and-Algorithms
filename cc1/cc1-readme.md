@@ -1,4 +1,4 @@
-# Code Challenge: Class 01
+# Code Challenge: Class-01
 ## Reversed Array 
 A reversed array is an array that has its elements in the reverse order compared to the original array.
 

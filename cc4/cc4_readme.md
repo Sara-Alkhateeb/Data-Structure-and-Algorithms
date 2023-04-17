@@ -1,4 +1,4 @@
-# Code Challenge: Class 04
+# Code Challenge: Class-04
 ## Sum-Matrix
 ### given a matrix of integer numbers, needs to sum each row,
 and return an array with the appropriate values.
