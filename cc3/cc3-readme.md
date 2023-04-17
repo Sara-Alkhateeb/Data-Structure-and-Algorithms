@@ -3,7 +3,7 @@
 `Binary search` is a search algorithm that works efficiently on sorted arrays. It repeatedly divides the search interval in half until the target element is found or determined to be not present. It has a time complexity of O(log n) where n is the size of the array.
 
 ## Whiteboard Process
-![cc](./whiteborad.png)
+![cc](../assest/whiteborad-cc3.png)
 
 
 ## Approach & Efficiency
