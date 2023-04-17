@@ -1,9 +1,9 @@
 # Code Challenge: Class-06
-# Linked-List
+# Linked-List-Insertions
 A linked list is a linear data structure in which each element, called a node, stores a value and a reference to the next node. This Code uses to insert an element into a linked list, create a new node with the value and link it to the previous node's reference. To check if a value is in the linked list, traverse the list by following the node references until find the value or reach the end of the list.
 
 ## Whiteboard Process
-
+![](../assest/calss06.png)
 
 
 ## Approach & Efficiency

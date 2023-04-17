@@ -1,6 +1,30 @@
 
-from LLInsertion.node import Node
+# from LLInsertion.node import Node
+""""
+The Node class represents a single node in the linked list, with two attributes:
+value: The value stored in the node.
+next: A reference to the next node in the linked list.
+Methods: Node.__init__(self, value): Initializes a Node instance with a value and a reference to the next node.
+Input: value (any type): The value to be stored in the node.
+Output :None"""
 
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+""""
+The LinkedList class represents the linked list itself, with one attribute:
+head: A reference to the first node in the linked list.
+
+Methods:
+- LinkedList.__init__(self): Initializes an empty LinkedList instance with a null head node.
+- LinkedList.__repr__(self): Returns a string representation of the linked list, with each node's value separated by an arrow.
+- LinkedList.insert(self, value): Inserts a new node with the given value at the beginning of the linked list.
+- LinkedList.includes(self, value): Checks if the linked list contains a node with the given value.
+- LinkedList.__str__(self): Returns a string representation of the linked list, with each node's value enclosed in braces and separated by an arrow, and with the last node pointing to null.
+
+"""
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -116,10 +140,12 @@ ll.append(0)
 ll.insert(10)
 ll.append(20)
 ll.insert_before(0,1)
+
 # ll.insert_before(7,1)
 ll.insert_after(7,1)
 ll.insert_after(20,30)
 ll.append(20)
+
 print(ll)  # "1 -> 2 -> 3 -> None"
 # print(ll.includes(2))  # True
 # print(ll.includes(4))  # False
