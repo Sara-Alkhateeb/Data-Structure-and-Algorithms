@@ -6,4 +6,4 @@
 | 3. ArrayBinarySearch       |  [Readme.md](./cc3/cc3-readme.md) |
 | 4. Sum-Matrix              |  [Readme.md](./cc4/cc4_readme.md) |
 | 5. LinkedList              |  [Readme.md](./linkedlist/cc5_readme.md) |
-| 6. linked-list-insertions  |  [Readme.md](./linked-list-insertions/linked-list-insertions.md) |
+| 6. linked-list-insertions  |  [Readme.md](./LLInsertion/linked-list-insertions.md) |
