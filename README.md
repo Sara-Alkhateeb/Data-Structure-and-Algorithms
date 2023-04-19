@@ -7,4 +7,4 @@
 | 4. Sum-Matrix              |  [Readme.md](./cc4/cc4_readme.md) |
 | 5. LinkedList              |  [Readme.md](./linkedlist/cc5_readme.md) |
 | 6. linked-list-insertions  |  [Readme.md](./LLInsertion/linked-list-insertions.md) |
-| 6. linked-list-Kth  |  [Readme.md](./LLkth/linked_list_kth.md) |
+| 7. linked-list-Kth  |  [Readme.md](./LLkth/linked_list_kth.md) |
