@@ -9,3 +9,5 @@
 | 6. linked-list-insertions  |  [Readme.md](./LLInsertion/linked-list-insertions.md) |
 | 7. linked-list-Kth  |  [Readme.md](./LLkth/linked_list_kth.md) |
 | 8. linked-list-zip  |  [Readme.md](./LLzip/linked_list_zip.md) |
+| 9. Reversed-linked-list  |  [Readme.md](./reversedLL/reversedLL.md) |
+
