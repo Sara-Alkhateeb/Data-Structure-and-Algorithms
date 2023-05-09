@@ -11,5 +11,5 @@
 | 08. Linked-list-zip  |  [Readme.md](./LLzip/linked_list_zip.md) |
 | 09. Reversed-linked-list  |  [Readme.md](./reversedLL/reversedLL.md) |
 | 10. Stack-and-queue  |  [Readme.md](./stack_and_queue/stack-and-queue.md) |
-| 11. stack-queue-pseudo  |  [Readme.md](./stack-queue-pseudo/stack-queue-pseudo.md) |
+| 11. stack-queue-pseudo  |  [Readme.md](./s_q_pseudo/s_q_pseudo.md) |
 
