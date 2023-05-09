@@ -41,6 +41,7 @@ class Stack:
         return popped_node.value
 
     def peek(self):
+
         """
         Returns the value of the Node at the top of the Stack without removing it.
 
