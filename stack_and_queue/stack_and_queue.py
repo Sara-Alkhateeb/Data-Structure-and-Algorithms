@@ -21,6 +21,7 @@ class Stack:
         return popped_node.value
 
     def peek(self):
+
         if self.is_empty():
             raise Exception("Stack is empty")
         return self.top.value

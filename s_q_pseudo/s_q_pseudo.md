@@ -1,12 +1,12 @@
 # Code Challenge: Class-11
-# stack-and-queue
+# stack-and-queue - Pseudo
 A stack is a Last-In-First-Out (LIFO) data structure in which the last element added is the first one to be removed. The main operations performed on a stack are push (add an element to the top) and pop (remove the top element). Other common operations include peek (return the top element without removing it) and isEmpty (check if the stack is empty).
 
 A queue is a First-In-First-Out (FIFO) data structure in which the first element added is the first one to be removed. The main operations performed on a queue are enqueue (add an element to the back) and dequeue (remove the front element). Other common operations include peek (return the front element without removing it) and isEmpty (check if the queue is empty).
 
 
 ## Whiteboard Process
-![cc](../assest/Whiteboradcc10.png)
+![cc](../assest/Whiteboard11.png)
 
 ## Approach & Efficiency
 ## 1. Algorithm :
