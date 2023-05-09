@@ -21,7 +21,7 @@ class Stack:
         Adds a new Node with the given value to the top of the Stack.
 
         Parameters:
-        -value: The value to be added to the Stack.
+        - value: The value to be added to the Stack.
         """
         new_node = Node(value)
         new_node.next = self.top
