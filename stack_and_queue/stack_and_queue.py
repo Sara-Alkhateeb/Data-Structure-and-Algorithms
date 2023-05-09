@@ -29,9 +29,9 @@ class Stack:
 
     def pop(self):
         """
-        Removes and returns the value of the Node at the top of the Stack.
+        - Removes and returns the value of the Node at the top of the Stack.
 
-        Raises an Exception if the Stack is empty.
+        - Raises an Exception if the Stack is empty.
         """
         if self.is_empty():
             raise Exception("Stack is empty")
