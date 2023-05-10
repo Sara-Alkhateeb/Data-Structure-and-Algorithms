@@ -84,7 +84,7 @@ class PseudoQueue:
                     
             current = current.next
         
-        items.append("None") 
+        items.insert(0, "None") 
         return "->".join(items)
     
 

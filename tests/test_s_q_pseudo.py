@@ -8,7 +8,7 @@ def test_enqueue():
     q.enqueue(15)
     q.enqueue(10)
     q.enqueue(5)
-    assert str(q) == "[5]->[10]->[15]->[20]->None"
+    assert str(q) == "None->[5]->[10]->[15]->[20]"
 
 
 def test_dequeue():
@@ -17,7 +17,7 @@ def test_dequeue():
     q.enqueue(15)
     q.enqueue(10)
     q.enqueue(5)
-    assert str(q) == "[5]->[10]->[15]->[20]->None"
+    assert str(q) == "None->[5]->[10]->[15]->[20]"
 
 def test_dequeue_value():
     q = PseudoQueue()
