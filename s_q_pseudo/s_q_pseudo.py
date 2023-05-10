@@ -48,21 +48,43 @@ class PseudoQueue:
         If the second stack is empty, 
         all the values from the first stack are transferred to the second stack using the pop method of the first stack."""
         if self.stack1.is_empty() and self.stack2.is_empty():
-            raise Exception("PseudoQueue is empty")
-        elif self.stack2.is_empty():
+            return("Pseudo Queue is empty")
+        
+        if self.stack2.is_empty():
             while not self.stack1.is_empty():
                 self.stack2.push(self.stack1.pop())
+
         return self.stack2.pop()
 
     
     def __str__(self):
-        # if self.stack1.is_empty():
-        #     return "PseudoQueue is empty"
+
+
+
+        if self.stack1.is_empty() and  self.stack2.is_empty():
+            return "PseudoQueue is empty"
         items = []
-        current = self.stack1.top
+        
+        current=None
+        flag=not self.stack2.is_empty()
+
+        if flag:
+            current = self.stack2.top
+        else :
+            current = self.stack1.top
+
+
+
         while current:
-            items.append(f"[{current.value}]")
+            if flag:
+                items.insert(0,f"[{current.value}]")
+                
+            else :
+                  items.append(f"[{current.value}]")  
+                    
             current = current.next
+        
+        items.insert(0, "None") 
         return "->".join(items)
     
 
@@ -73,13 +95,25 @@ queue.enqueue(10)
 print(queue)
 queue.enqueue(5)
 print(queue)
-value1=queue.dequeue()
-print(value1)
-value2=queue.dequeue()
-print(value2)
+queue.dequeue()
+print(queue)
+queue.dequeue()
+print(queue)
 
 
 
+
+
+
+
+
+# stack1=Stack()
+# print(stack1.push(1))
+# print(stack1.push(2))
+# print(stack1.push(3))
+# print(stack1.pop())
+# print(stack1)
+ 
 
 
 

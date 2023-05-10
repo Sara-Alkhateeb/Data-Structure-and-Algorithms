@@ -26,6 +26,7 @@ class Stack:
         new_node = Node(value)
         new_node.next = self.top
         self.top = new_node
+        return new_node.value
 
     def pop(self):
         """
@@ -110,4 +111,12 @@ class Queue:
         Returns True if the Queue is empty, and False otherwise.
         """
         return self.front is None
+
+stack1=Stack()
+print(stack1.push(1))
+print(stack1.push(2))
+print(stack1.push(3))
+print(stack1.pop())
+
+
 
