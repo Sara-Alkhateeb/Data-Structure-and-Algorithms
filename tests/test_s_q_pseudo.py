@@ -1,29 +1,36 @@
 import pytest
-import unittest
 from s_q_pseudo.s_q_pseudo import PseudoQueue
 
-class TestPseudoQueue(unittest.TestCase):
-    def setUp(self):
-        self.queue = PseudoQueue()
 
-    def test_enqueue(self):
-        self.queue.enqueue(1)
-        self.assertEqual(str(self.queue), "[1]")
+def test_enqueue():
+    q = PseudoQueue()
+    q.enqueue(20)
+    q.enqueue(15)
+    q.enqueue(10)
+    q.enqueue(5)
+    assert str(q) == "[5]->[10]->[15]->[20]->None"
 
-    def test_dequeue(self):
-        self.queue.enqueue(1)
-        self.queue.enqueue(2)
-        # self.queue.enqueue(3)
-        self.queue.dequeue()
-        # self.assertEqual(value, 1)
-        self.assertEqual(str(self.queue), "[1]")
 
-    def test_dequeue_empty_queue(self):
-        with self.assertRaises(Exception):
-            self.queue.dequeue()
+def test_dequeue():
+    q = PseudoQueue()
+    q.enqueue(20)
+    q.enqueue(15)
+    q.enqueue(10)
+    q.enqueue(5)
+    assert str(q) == "[5]->[10]->[15]->[20]->None"
 
-if __name__ == '__main__':
-    unittest.main()
+def test_dequeue_value():
+    q = PseudoQueue()
+    q.enqueue(20)
+    q.enqueue(15)
+    q.enqueue(10)
+    assert q.dequeue() == 20
+
+def test_dequeue_empty_queue():
+    q = PseudoQueue()
+    assert q.dequeue() == "Pseudo Queue is empty"
+
+
 
 
 
