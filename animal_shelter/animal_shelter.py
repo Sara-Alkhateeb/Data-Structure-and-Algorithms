@@ -1,4 +1,3 @@
-
 class Animal():
     """
     A class representing an animal.
@@ -32,19 +31,8 @@ class AnimalShelter():
         """
         Initializes an AnimalShelter instance.
         """
-        self.front = None
-        self.back = None
-        self.dogs = []
-        self.cats = []
-
-    def is_empty(self):
-        """
-        Checks whether the shelter is empty.
-
-        Returns:
-            bool: True if the shelter is empty, False otherwise.
-        """
-        return self.front is None 
+        self.cats_dogs = []
+        
           
     def enqueue(self, animal):
         """
@@ -57,18 +45,8 @@ class AnimalShelter():
             list: The list of animals of the same species as the added animal (either self.dogs or self.cats).
                   Returns an error message if the animal's species is not 'dog' or 'cat'.
         """
-        if animal.species == 'dog':
-            self.dogs.append(animal.species)
-            return self.dogs
-
-        elif animal.species == 'cat':
-            self.cats.append(animal.species)
-            return self.cats
-
-        else :
-            return "You should only use : dog , cat"
-
-           
+        self.cats_dogs.append(animal.species)   
+        return (animal.species)
 
     def dequeue(self, value):
         """
@@ -81,55 +59,46 @@ class AnimalShelter():
             Animal or None: The removed animal (the oldest animal of the requested species),
                             or None if no animal of the requested species is found.
         """
-        if value != self.dogs[0] and value != self.cats[0]:
+        if len(self.cats_dogs) == 0 :
+            return "Empty queue" 
+        if value != "dog" and value != "cat":
             return None
         
-        elif value == self.dogs[0]:
-            return self.dogs.pop(0)
+        if value == self.cats_dogs[0]:
+            return self.cats_dogs.pop(0)
         
-        elif value == self.cats[0]:
-            return self.cats.pop(0)
+        for i in range (len(self.cats_dogs)):
+            if value == self.cats_dogs[i]:
+             return self.cats_dogs.pop(i)
+
+        
         
     def __str__(self):
-        output = "None"
-        if self.front is not None:
-            output = f"[{self.front.species}]"
-            current = self.front.next
-            while current is not None:
-                output += f"<-[{current.species}]"
-                current = current.next
-        dog_len = len(self.dogs)
-        cat_len = len(self.cats)
-        if dog_len == cat_len:
-            for i in range(dog_len):
-                output += f"<-[{self.dogs[i]}]<-[{self.cats[i]}]"
-        elif dog_len > cat_len:
-            for i in range(cat_len):
-                output += f"<-[{self.dogs[i]}]<-[{self.cats[i]}]"
-            for i in range(cat_len, dog_len):
-                output += f"<-[{self.dogs[i]}]"
-        else:
-            for i in range(dog_len):
-                output += f"<-[{self.dogs[i]}]<-[{self.cats[i]}]"
-            for i in range(dog_len, cat_len):
-                output += f"<-[{self.cats[i]}]"
-        return output
-
+    # Format for the output in queue way   
+        if len(self.cats_dogs) == 0:
+            return 'None'
+        
+        cats_dog_str = '-->'.join([animal for animal in self.cats_dogs])
+        return cats_dog_str + "--> None "
+    
 
     
 Animal1 = Animal("pet", "dog")
 Animal2 = Animal("chanle", "cat")
 Animal3 = Animal("pug", "dog")
-
+Animal4 = Animal("pug", "dog")
+Animal5 = Animal("pug", "dog")
+Animal6 = Animal("pug", "cat")
 al=AnimalShelter()
 print(al.enqueue(Animal1))
 print(al.enqueue(Animal2))
 print(al.enqueue(Animal3))
-print(al)
-print(al.dequeue(Animal3.species))
-print(al)
-Animal4 = Animal("pug", "cat")
 print(al.enqueue(Animal4))
+print(al.enqueue(Animal6))
+print(al)
+print(al.dequeue(Animal6.species))
+print(al)
+al.enqueue(Animal5)
 print(al)
 
 

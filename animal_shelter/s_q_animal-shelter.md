@@ -4,7 +4,7 @@ A queue is a First-In-First-Out (FIFO) data structure in which the first element
 
 
 ## Whiteboard Process
-![cc](../assest/Whiteboard11.png)
+![cc](../assest/wh12.png)
 
 ## Approach & Efficiency
 ## 1. Algorithm :
@@ -47,7 +47,7 @@ Here are the space complexity (big O) for various operations related to stacks a
 For a `queue`, the space complexity is also proportional to the number of elements stored in the queue. Each element requires a Node object with a value and a pointer to the next node. Therefore, the space complexity of a queue is also O(n), where n is the number of elements in the queue.
 
 ## Solution
-### [click here to the stack and queues code](./s_q_animal-shelter.py)
+### [click here to the stack and queues code](./animal_shelter.py)
 ### [click here to the Test code](../tests/test_s_q_animal_shelter.py)
 ### To run the code:
     -on your terminal follow these command:
