@@ -69,7 +69,7 @@ class AnimalShelter():
         
         for i in range (len(self.cats_dogs)):
             if value == self.cats_dogs[i]:
-             return self.cats_dogs.pop(i)
+             return self.cats_dogs.pop(i) 
 
         
         
