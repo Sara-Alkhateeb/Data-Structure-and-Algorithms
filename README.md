@@ -13,4 +13,5 @@
 | 10. Stack-and-queue  |  [Readme.md](./stack_and_queue/stack-and-queue.md) |
 | 11. stack-queue-pseudo  |  [Readme.md](./s_q_pseudo/s_q_pseudo.md) |
 | 12. stack-queue-animal-shelter |  [Readme.md](./animal_shelter/s_q_animal-shelter.md) |
+| 13. stack-queue-brackets|  [Readme.md](./stack_queue_brackets/stack_queue_brackets.md) |
 
