@@ -1,5 +1,5 @@
 # Code Challenge: Class-13
-# stack-and-queue 
+# stack
 ### Problem Domain
 
 The problem domain is it to  creating stack that check about the input if it is acceptable or not and give us a boolean value, so arguments: string
@@ -7,7 +7,7 @@ then return: boolean
 The code should design to check whether the brackets in a given string are balanced or not. It verifies the correct placement and matching of three types of brackets: round brackets "()", square brackets "[]", and curly brackets "{}".
 
 ## Whiteboard Process
-![cc](../assest/wh12.png)
+![cc](../assest/whitebored13.png)
 
 ## Approach & Efficiency
 ## 1. Algorithm :

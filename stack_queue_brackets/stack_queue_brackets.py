@@ -1,16 +1,27 @@
 
-def validate_brackets(string):
+def validate_brackets(input):
+    """
+    Validate the balance of brackets in a given input string.
+
+    Arguments:
+    - input: A string containing various types of brackets.
+
+    Returns:
+    - A boolean value indicating whether the brackets are balanced or not.
+      True if the brackets are balanced, False otherwise.
+      
+    """
     stack = []
     bracket_pairs = {'(': ')', '[': ']', '{': '}'}
     
-    for char in string:
-        if char in bracket_pairs:
-            stack.append(char)
-        elif char in bracket_pairs.values():
+    for item in input:
+        if item in bracket_pairs:
+            stack.append(item)
+        elif item in bracket_pairs.values():
             if not stack:
                 return False
             opening_bracket = stack.pop()
-            if char != bracket_pairs[opening_bracket]:
+            if item != bracket_pairs[opening_bracket]:
                 return False
     
     return len(stack) == 0
