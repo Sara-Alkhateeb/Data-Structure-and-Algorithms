@@ -1,18 +1,35 @@
 class Node():
    def __init__(self, value):
+      """
+        Initialize a new node with the given value.
+
+        Args:
+            value: The value to assign to the node.
+      """
       self.value =value
       self.left= None
       self.right = None
 
 class Binary_Tree ():
     def __init__(self):
+        """
+        Initialize an empty binary tree.
+        """
         self.root=None
         self.stack_pre_order= []
         self.stack_in_order=[]
         self.stack_post_order=[]
 
     def pre_order(self, root):
+        """
+        Perform a pre-order traversal on the binary tree.
 
+        Args:
+            root: The root node of the tree or subtree to traverse.
+
+        Returns:
+            A list of values in the order encountered during pre-order traversal.
+        """
         if root is None:
             return  None
         if root is not None:
@@ -25,7 +42,15 @@ class Binary_Tree ():
 
 
     def in_order(self , root):
+        """
+        Perform an in-order traversal on the binary tree.
 
+        Args:
+            root: The root node of the tree or subtree to traverse.
+
+        Returns:
+            A list of values in the order encountered during in-order traversal.
+        """
         if root is None:
             return  None
        
@@ -38,6 +63,15 @@ class Binary_Tree ():
         return self.stack_in_order
         
     def post_order(self, root):
+        """
+        Perform a post-order traversal on the binary tree.
+
+        Args:
+            root: The root node of the tree or subtree to traverse.
+
+        Returns:
+            A list of values in the order encountered during post-order traversal.
+        """
         if root is None:
             return  None
         if root.left is not None:
@@ -52,9 +86,18 @@ class Binary_Tree ():
 
 class BinarySearchTree(Binary_Tree):
     def __init__ (self):
+        """
+        Initialize an empty binary search tree.
+        """
         Binary_Tree.__init__(self)
 
     def add(self, value):
+        """
+        Add a new node with the given value to the binary search tree.
+
+        Args:
+            value: The value to add to the tree.
+        """
         new_node = Node(value)
 
         if self.root is None:
@@ -77,6 +120,15 @@ class BinarySearchTree(Binary_Tree):
                         current_node = current_node.right
 
     def contains(self, value):
+        """
+        Check if the binary search tree contains a node with the given value.
+
+        Args:
+            value: The value to search for in the tree.
+
+        Returns:
+            True if the value is found, False otherwise.
+        """
         current_node = self.root
         while current_node is not None:
             if value == current_node.value:
