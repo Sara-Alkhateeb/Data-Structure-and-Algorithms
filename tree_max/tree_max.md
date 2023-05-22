@@ -45,7 +45,7 @@ Here are the `space complexity` (big O) for various operations:
 
 ## Solution
 ### [click here to the code](./tree_max.py)
-### [click here to the Test code](../tests/test_trees.py)
+### [click here to the Test code](../tests/test_max_tree.py)
 
 ## Test Cases
 
