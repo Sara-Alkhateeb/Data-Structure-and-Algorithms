@@ -16,4 +16,5 @@
 | 13. stack-queue-brackets|  [Readme.md](./stack_queue_brackets/stack_queue_brackets.md) |
 | 14. Max-stack|  [Readme.md](./Max-stack/max_stack.md) |
 | 15. Trees |  [Readme.md](./trees/trees.md) |
+| 15. Max_tree |  [Readme.md](./tree_max/tree_max.md) |
 
