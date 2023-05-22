@@ -139,8 +139,6 @@ class BinarySearchTree(Binary_Tree):
                 current_node = current_node.right
         return False
         
-         
-
 
 bst = BinarySearchTree()
 B_tree =Binary_Tree()
