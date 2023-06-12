@@ -18,5 +18,5 @@
 | 15. Trees |  [Readme.md](./trees/trees.md) |
 | 16. Max_tree |  [Readme.md](./tree_max/tree_max.md) |
 | 17. Tree-breadth-first|  [Readme.md](./TBF/breath_first.md) |
-| 18. InsertionSort|  [Readme.md](./InsertionSort/InsertionSort.md) |
+| 18. InsertionSort|  [Readme.md](./sorting/insertion/README.md) |
 
