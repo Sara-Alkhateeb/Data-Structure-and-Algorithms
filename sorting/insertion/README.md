@@ -47,6 +47,7 @@
 
 ## Link of the code
 ### [click here to the InsertionSort code](./InsertionSort.py)
+### [click here to the InsertionSort test](../../tests/test_sorting_insertion.py)
 
 
 
