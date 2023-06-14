@@ -1,5 +1,15 @@
 
 def insertion_sort(unsortedArr):
+        """
+        Sorts an array using the Insertion Sort algorithm.
+
+        Args:
+        unsortedArr (list): The unsorted array.
+
+        Returns:
+        list: The sorted array.
+
+        """
         for i in range (1, len(unsortedArr)):
             n = i
             while unsortedArr[n-1]> unsortedArr[n] and n> 0:
