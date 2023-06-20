@@ -19,4 +19,4 @@
 | 16. Max_tree |  [Readme.md](./tree_max/tree_max.md) |
 | 17. Tree-breadth-first|  [Readme.md](./TBF/breath_first.md) |
 | 18. InsertionSort|  [Readme.md](./sorting/insertion/README.md) |
-| 18. Sort Object|  [Readme.md](./sorting/sort_objects/sort_obj.md) |
+| 19. Sort Object|  [Readme.md](./sorting/sort_objects/sort_obj.md) |
