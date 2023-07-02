@@ -15,14 +15,18 @@ def test_kth_from_end_k_two(ll):
 
 # Test kth_from_end with k greater than length of linked list
 def test_kth_from_end_k_greater_than_length(ll):
-    expected = "Invalid value of k"
-    actual = str(ll.kth_from_end(15))
-    assert expected == actual
+    # expected = ValueError
+    # actual = str(ll.kth_from_end(15))
+    # assert expected == actual
+    with pytest.raises(Exception):       
+        ll.kth_from_end(15)
 
 def test_kth_from_end_k_greater_nigtev_num(ll):
-    expected = "Invalid value of k"
-    actual = str(ll.kth_from_end(-10))
-    assert expected == actual
+    # expected = ValueError
+    # actual = str(ll.kth_from_end(-10))
+    # assert expected == actual
+    with pytest.raises(Exception): 
+        ll.kth_from_end(-10)
 
 def test_kth_equal_length(ll):
     expected = "1"

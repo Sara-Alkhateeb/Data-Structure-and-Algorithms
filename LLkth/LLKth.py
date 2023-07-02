@@ -145,48 +145,36 @@ class LinkedList:
     """
     def kth_from_end(self, k):
         if k < 0 or k >= self.length:
-            return "Invalid value of k"
-     
-        # elif k == 0 and self.length == 0:
-        #     return "Linked list is empty"
-        
+           raise Exception("Invalid value of k")
+ 
         else:
             curr = self.head
             for i in range(self.length - k - 1):
                 curr = curr.next
             return curr.value
 
-   
 
-    
-ll = LinkedList()
+if __name__ == "__main__" :
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.append(4)
+    ll.append(5)
+    ll.append(20)
+    print(ll.kth_from_end(0)) 
+    print(ll.kth_from_end(2)) 
+    print(ll.kth_from_end(4)) 
+    print(ll.kth_from_end(6)) 
+    print(ll.kth_from_end(-10)) 
 
-# ll.insert(3)
-# ll.insert(5)
-# ll.insert(2)
-# ll.append(0)
-# ll.insert(10)
-# ll.append(20)
-# ll.insert_before(0,1)
-# ll.insert_after(15,1)
-# ll.insert_after(20,30)
-# ll.append(20)
-# print( f"Is number 5 exist : {ll.includes(5)}")
+    print(ll) 
 
-ll.append(1)
-ll.append(2)
-ll.append(3)
-ll.append(4)
-ll.append(5)
-ll.append(20)
-print(ll.kth_from_end(0)) 
-print(ll.kth_from_end(2)) 
-print(ll.kth_from_end(4)) 
-print(ll.kth_from_end(6)) 
+#  try:
+#     print(ll.kth_from_end(6))
 
-print(ll) 
-
-
+#  catch Exception as e:
+#     print(e)
 
 
 
