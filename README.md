@@ -20,4 +20,5 @@
 | 17. Tree-breadth-first|  [Readme.md](./TBF/breath_first.md) |
 | 18. InsertionSort|  [Readme.md](./sorting/insertion/README.md) |
 | 19. Sort Object|  [Readme.md](./sorting/sort_objects/sort_obj.md) |
-| 20. Hash table|  [Readme.md](./hash_table/README.md) |
+| 20. Hash table|  [Readme.md](./hash_table/hashtable/README.md) |
+| 21. Hashmap- repeted word|  [Readme.md](./hash_table/repetedword/README.md) |
