@@ -1,16 +1,17 @@
 import re
 from hash_table.hashtable.hashtable import Hashtable
-    """
-    Finds the first repeated word in a given string.
 
-    Args:
-        string (str): The input string.
-
-    Returns:
-        str: The first repeated word found in the string, or None if no repeated word is found.
-
-    """
 def repeated_word(string):
+    """
+        Finds the first repeated word in a given string.
+
+        Args:
+            string (str): The input string.
+
+        Returns:
+            str: The first repeated word found in the string, or None if no repeated word is found.
+
+    """
     words = re.split(r"\s+|,\s*", string)  
     obj = Hashtable()
     for word in words:
