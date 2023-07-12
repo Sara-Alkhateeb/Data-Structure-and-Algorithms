@@ -4,7 +4,7 @@ Find common values in 2 binary trees.
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![whiteboard](../assest/cc33.jpg)
+![whiteboard](../assest/treeintersection.jpg)
 
 ## Approach & Efficiency
 
