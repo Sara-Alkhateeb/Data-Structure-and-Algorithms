@@ -1,26 +1,25 @@
-from graph_breadth_first.graph_breadth_first import Node , breadth_first
+from graph_breadth_first.graph_breadth_first import Node, breadth_first
 
-def test_breadth_first():
-    # Test 1: Empty Graph
+def test_empty_graph():
     graph = Node("A")
     result = breadth_first(graph)
-    assert [node.value for node in result] == ["A"], "Test Case 1 Failed"
+    assert [node.value for node in result] == ["A"]
 
-    # Test 2: Single Node
+def test_single_node():
     graph = Node("A")
     result = breadth_first(graph)
-    assert [node.value for node in result] == ["A"], "Test Case 2 Failed"
+    assert [node.value for node in result] == ["A"]
 
-    # Test 3: Disconnected Graph
+def test_disconnected_graph():
     A = Node("A")
     B = Node("B")
     C = Node("C")
     A.edges = [B]
     C.edges = []
     result = breadth_first(A)
-    assert set([node.value for node in result]) == {"A", "B"}, "Test Case 3 Failed"
+    assert set([node.value for node in result]) == {"A", "B"}
 
-    # Test 4: Linear Graph
+def test_linear_graph():
     A = Node("A")
     B = Node("B")
     C = Node("C")
@@ -31,9 +30,9 @@ def test_breadth_first():
     C.edges = [D]
     D.edges = [E]
     result = breadth_first(A)
-    assert [node.value for node in result] == ["A", "B", "C", "D", "E"], "Test Case 4 Failed"
+    assert [node.value for node in result] == ["A", "B", "C", "D", "E"]
 
-    # Test 5: Complete Graph
+def test_complete_graph():
     A = Node("A")
     B = Node("B")
     C = Node("C")
@@ -43,4 +42,6 @@ def test_breadth_first():
     C.edges = [A, B, D]
     D.edges = [A, B, C]
     result = breadth_first(A)
-    assert set([node.value for node in result]) == {"A", "B", "C", "D"}, "Test Case 5 Failed"
+    assert set([node.value for node in result]) == {"A", "B", "C", "D"}
+
+
