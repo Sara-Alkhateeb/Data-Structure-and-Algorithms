@@ -3,7 +3,7 @@
 Implementing the breadth-first search algorithm to traverse the graph and return a collection of nodes in the order they were visited.
 
 ## Whiteboard Process
-![whiteboard](../assest/wh36.png)
+![whiteboard](../assest/graph_breadth_first_wh.png)
 
 ## Approach & Efficiency
         - The code starts by initializing an empty list nodes to store the visited nodes, a queue breadth using the deque class to keep track of nodes to visit, and a set visited to mark visited nodes.
