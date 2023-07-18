@@ -1,6 +1,15 @@
 from collections import deque
 
 class Node:
+    """
+        Initialize a Node object.
+
+        Parameters:
+        - value: The value associated with the node.
+
+        Returns:
+        - None
+    """
     def __init__(self, value):
         self.value = value
         self.edges = []
@@ -21,6 +30,18 @@ E.edges = [F , D]
 F.edges = [E , C, D]
 
 def breadth_first(vertex):
+    """
+    Perform a breadth-first search on a graph.
+
+    This function takes a starting vertex and explores the graph using the breadth-first search algorithm.
+    It returns a list of nodes visited in breadth-first order.
+
+    Parameters:
+    - vertex: The starting vertex for the breadth-first search.
+
+    Returns:
+    - List of nodes visited in breadth-first order.
+    """
     nodes = []
     breadth = deque()
     visited = set()
