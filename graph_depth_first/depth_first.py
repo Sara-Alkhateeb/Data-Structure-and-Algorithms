@@ -70,15 +70,6 @@ class Graph:
         edge2 = Edge(node1, weight)
         self.adj_list[node2].append(edge2)
 
-    def get_vertices(self):
-        """
-        Get all the vertices in the graph.
-
-        Returns:
-            A collection of all vertices in the graph.
-        """
-        return self.adj_list.keys()
-
     def get_neighbors(self, vertex):
         """
         Get the neighbors of a given vertex.
@@ -94,54 +85,55 @@ class Graph:
         else:
             return []
 
-    def size(self):
+    def depth_first(graph, root):
         """
-        Get the total number of vertices in the graph.
+        Perform depth-first traversal starting from the specified node.
+
+        Args:
+            graph (Graph): The graph object to perform depth-first traversal on.
+            root (Node): The node to start the depth-first traversal from.
 
         Returns:
-            The number of vertices in the graph.
+            list: A collection of nodes in their pre-order depth-first traversal order.
         """
-        return len(self.adj_list)
+        visited = set()
+        result = []
 
-    def __str__(self):
-        """
-        Return the string representation of the graph.
+        def dfs(node):
+            visited.add(node)
+            result.append(node)
 
-        Returns:
-            The graph representation as a string.
-        """
-        output = ''
-        for vertex in self.adj_list.keys():
-            output += f'{vertex} -> '
-            for edge in self.adj_list[vertex]:
-                output += f'{edge.vertex}({edge.weight}) -> '
-            output += '\n'
-        return output
+            for edge in graph.get_neighbors(node):
+                neighbor = edge.vertex
+                if neighbor not in visited:
+                    dfs(neighbor)
 
+        dfs(root)
+        return result
 
-# Test the graph
-# graph = Graph()
+# Example Usage:
+if __name__ == "__main__":
+    graph = Graph()
+    node_A = graph.add_node("A")
+    node_B = graph.add_node("B")
+    node_C = graph.add_node("C")
+    node_D = graph.add_node("D")
+    node_E = graph.add_node("E")
+    node_F = graph.add_node("F")
+    node_G = graph.add_node("G")
+    node_H = graph.add_node("H")
 
-# a = graph.add_node("A")
-# b = graph.add_node("B")
-# c = graph.add_node("C")
-# d = graph.add_node("D")
+    graph.add_edge(node_A, node_B)
+    graph.add_edge(node_A, node_D)
+    graph.add_edge(node_B, node_C)
+    graph.add_edge(node_B, node_D)
+    graph.add_edge(node_C, node_G)
+    graph.add_edge(node_D, node_A)
+    graph.add_edge(node_D, node_B)
+    graph.add_edge(node_D, node_E)
+    graph.add_edge(node_D, node_H)
+    graph.add_edge(node_D, node_F)
+    root = node_A
+    traversal_result = Graph.depth_first(graph, root)
 
-# graph.add_edge(a, b)
-# graph.add_edge(a, c)
-# graph.add_edge(c, b)
-# graph.add_edge(d, b)
-# graph.add_edge(d, c)
-
-# print('************************************')
-# print("Graph")
-# print(graph)
-# print('************************************')
-# for vertex in graph.get_vertices():
-#     print("vertex:", vertex)
-# print('************************************')
-# for vertex in graph.get_vertices():
-#     print("Neighbors of", vertex, ":", [edge.vertex.value for edge in graph.get_neighbors(vertex)], end="\n")
-# print('************************************')
-# print("Size of the graph:", graph.size())
-# print('************************************')
+    print("Output:", ", ".join(str(node) for node in traversal_result))
