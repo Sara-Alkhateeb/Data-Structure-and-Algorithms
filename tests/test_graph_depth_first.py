@@ -28,3 +28,13 @@ def test_depth_first_traversal():
 
     expected_result = [node_A, node_B, node_C, node_G, node_D, node_E, node_H, node_F]
     assert traversal_result == expected_result
+
+def test_depth_first_one_node():
+    graph = Graph()
+    node_A = graph.add_node("A")
+   
+    root = node_A
+    traversal_result = graph.depth_first(root)
+
+    expected_result = [node_A]
+    assert traversal_result == expected_result
