@@ -3,7 +3,7 @@
 Implementing depth first function to determine the graph by depth.
 
 ## Whiteboard Process
-![whiteboard](../assest/whcc38.png)
+![whiteboard](../assest/wh38-cc.png)
 
 ## Approach & Efficiency
 1. Initialize an empty visited set and an empty result list to keep track of visited nodes and store the pre-order depth-first traversal order, respectively.
